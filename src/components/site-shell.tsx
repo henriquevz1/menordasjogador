@@ -21,9 +21,9 @@ const nav: ReadonlyArray<{ label: string; to: "/" | "/entrega"; hash?: string }>
 
 export function Wordmark({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className="inline-flex items-center" aria-label="MENOR JOGADOR — início">
-      <span className={`grid h-16 w-16 place-items-center overflow-hidden rounded-full border-2 bg-secondary shadow-lg sm:h-20 sm:w-20 ${light ? "border-secondary-foreground/25" : "border-primary"}`}>
-        <img src={arrudaLogoUrl} alt="MENOR JOGADOR — Menó das Jogador" className="h-full w-full scale-105 object-cover" />
+    <Link to="/" className="inline-flex items-center self-center" aria-label="MENOR JOGADOR — início">
+      <span className={`flex h-12 w-12 items-center justify-center overflow-hidden rounded-sm border bg-background p-0.5 sm:h-14 sm:w-14 ${light ? "border-secondary-foreground/25" : "border-border"}`}>
+        <img src={arrudaLogoUrl} alt="MENOR JOGADOR — Menó das Jogador" className="h-auto max-h-full w-auto max-w-full object-contain" />
       </span>
     </Link>
   );
@@ -33,7 +33,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
-      <div className="mx-auto grid h-20 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center px-4 sm:h-24 sm:px-6 lg:px-8">
+      <div className="mx-auto grid h-[4.5rem] max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center px-4 sm:h-20 sm:px-6 lg:px-8">
         <Wordmark />
         <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
           {nav.map((item) => item.hash ? (
@@ -42,7 +42,7 @@ export function SiteHeader() {
             <Link key={item.label} to={item.to} className="text-xs font-bold uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground">{item.label}</Link>
           ))}
         </nav>
-        <Button variant="ghost" size="icon" className="md:hidden" aria-label={open ? "Fechar menu" : "Abrir menu"} onClick={() => setOpen(!open)}>
+        <Button variant="ghost" size="icon" className="self-center md:hidden" aria-label={open ? "Fechar menu" : "Abrir menu"} onClick={() => setOpen(!open)}>
           {open ? <X /> : <Menu />}
         </Button>
       </div>
