@@ -20,11 +20,18 @@ const nav: ReadonlyArray<{ label: string; to: "/" | "/entrega"; hash?: string }>
 ];
 
 export function Wordmark({ light = false }: { light?: boolean }) {
+  if (light) {
+    return (
+      <Link to="/" className="inline-flex items-center self-center" aria-label="MENOR JOGADOR — início">
+        <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-sm border border-secondary-foreground/25 bg-background p-0.5">
+          <img src={arrudaLogoUrl} alt="MENOR JOGADOR — Menó das Jogador" className="h-auto max-h-full w-auto max-w-full object-contain" />
+        </span>
+      </Link>
+    );
+  }
   return (
-    <Link to="/" className="inline-flex items-center self-center" aria-label="MENOR JOGADOR — início">
-      <span className={`flex h-12 w-12 items-center justify-center overflow-hidden rounded-sm border bg-background p-0.5 sm:h-14 sm:w-14 ${light ? "border-secondary-foreground/25" : "border-border"}`}>
-        <img src={arrudaLogoUrl} alt="MENOR JOGADOR — Menó das Jogador" className="h-auto max-h-full w-auto max-w-full object-contain" />
-      </span>
+    <Link to="/" className="inline-flex self-center" aria-label="MENOR JOGADOR — início">
+      <img src={arrudaLogoUrl} alt="MENOR JOGADOR — Menó das Jogador" className="h-10 w-auto shrink-0 object-contain sm:h-12" />
     </Link>
   );
 }
