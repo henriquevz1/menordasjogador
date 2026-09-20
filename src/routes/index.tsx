@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, ChevronRight, MessageCircle, PackageCheck, Ruler, ShieldCheck, ShoppingBag, Star } from "lucide-react";
 import { useState } from "react";
-import darkJeans from "@/assets/arruda-dark-jeans-jogador.jpg";
-import blueJeans from "@/assets/arruda-blue-jeans-jogador.jpg";
 import blackWhiteShortsAsset from "@/assets/short-jogador-black-cordao-branco.jpeg.asset.json";
 import graphiteShortsAsset from "@/assets/short-jogador-grafite-destroyed.jpeg.asset.json";
 import blackGoldShortsAsset from "@/assets/short-jogador-black-yellow.jpeg.asset.json";
@@ -27,8 +25,6 @@ export const Route = createFileRoute("/")({
 type Product = { name: string; category: string; image: string; description: string; washes: string[]; price?: string };
 
 const products: Product[] = [
-  { name: "Calça Jogador Black", category: "Calças Jeans", image: darkJeans, description: "Modelagem ajustada, lavagem estonada, puídos e respingos que marcam presença.", washes: ["Chumbo estonado", "Preto marmorizado"], price: "R$ 160,00" },
-  { name: "Calça Jogador Ice", category: "Calças Jeans", image: blueJeans, description: "Jeans claro de shape afunilado, efeito acid wash e rasgos na medida.", washes: ["Cinza ice", "Azul gelo"], price: "R$ 140,00" },
   { name: "Calça Jogador Black X", category: "Calças Jeans", image: blackXJeansAsset.url, description: "Jeans preto de modelagem ajustada, lavagem estonada, respingos e detalhe X em destaque.", washes: ["Preto estonado"], price: "R$ 160,00" },
   { name: "Calça Jogador Ice Destroyed", category: "Calças Jeans", image: iceDestroyedJeansAsset.url, description: "Jeans cinza claro de shape afunilado, lavagem acid wash e detalhes destroyed.", washes: ["Cinza ice"], price: "R$ 140,00" },
   { name: "Bermuda Jogador Black White", category: "Bermudas Jeans", image: blackWhiteShortsAsset.url, description: "Jeans preto destroyed com respingos claros, barra desfiada e cordão branco.", washes: ["Preto estonado"], price: "R$ 135,00" },
