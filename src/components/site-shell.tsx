@@ -39,9 +39,8 @@ export function Wordmark({ light = false }: { light?: boolean }) {
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
-      <div className="mx-auto grid h-[4.5rem] max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center px-4 sm:h-20 sm:px-6 lg:px-8">
-        <Wordmark />
+    <header className="sticky top-0 z-40 bg-transparent">
+      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-end px-4 sm:h-20 sm:px-6 lg:px-8">
         <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
           {nav.map((item) => item.hash ? (
             <a key={item.label} href={`/#${item.hash}`} className="text-xs font-bold uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground">{item.label}</a>
