@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 type Product = { name: string; category: string; image: string; description: string; washes: string[]; price?: string };
 
 const products: Product[] = [
-  { name: "Calça Jogador Black X", category: "Calças Jeans", image: blackXJeansAsset.url, description: "Jeans preto de modelagem ajustada, lavagem estonada, respingos e detalhe X em destaque.", washes: ["Preto estonado"], price: "R$ 160,00" },
+  { name: "Calça Jogador Black X", category: "Calças Jeans", image: blackXJeansAsset.url, description: "Jeans preto de modelagem ajustada, lavagem estonada, respingos e detalhe X em destaque.", washes: ["Preto estonado"], price: "R$ 140,00" },
   { name: "Calça Jogador Ice Destroyed", category: "Calças Jeans", image: iceDestroyedJeansAsset.url, description: "Jeans cinza claro de shape afunilado, lavagem acid wash e detalhes destroyed.", washes: ["Cinza ice"], price: "R$ 140,00" },
   { name: "Bermuda Jogador Black White", category: "Bermudas Jeans", image: blackWhiteShortsAsset.url, description: "Jeans preto destroyed com respingos claros, barra desfiada e cordão branco.", washes: ["Preto estonado"], price: "R$ 135,00" },
   { name: "Bermuda Jogador Grafite Destroyed", category: "Bermudas Jeans", image: graphiteShortsAsset.url, description: "Lavagem grafite marmorizada, recortes destroyed e acabamento desfiado.", washes: ["Grafite ice"], price: "R$ 135,00" },
