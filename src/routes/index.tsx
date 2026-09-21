@@ -7,6 +7,7 @@ import blackGoldShortsAsset from "@/assets/short-jogador-black-yellow.jpeg.asset
 import blackGoldSplashShortsAsset from "@/assets/short-jogador-black-yellow-splash.jpeg.asset.json";
 import blackXJeansAsset from "@/assets/calca-jogador-black-x.jpeg.asset.json";
 import iceDestroyedJeansAsset from "@/assets/calca-jogador-ice-destroyed.jpeg.asset.json";
+import blackCityJeansAsset from "@/assets/calca-jogador-black-city.jpeg.asset.json";
 import { Button } from "@/components/ui/button";
 import { arrudaLogoUrl, SiteLayout, whatsappUrl } from "@/components/site-shell";
 
