@@ -26,6 +26,7 @@ export const Route = createFileRoute("/")({
 type Product = { name: string; category: string; image: string; description: string; washes: string[]; price?: string };
 
 const products: Product[] = [
+  { name: "Calça Jogador Black City", category: "Calças Jeans", image: blackCityJeansAsset.url, description: "Jeans preto com modelagem skinny, costuras em tom sobre tom e acabamento limpo.", washes: ["Preto intenso"], price: "R$ 160,00" },
   { name: "Calça Jogador Black X", category: "Calças Jeans", image: blackXJeansAsset.url, description: "Jeans preto de modelagem ajustada, lavagem estonada, respingos e detalhe X em destaque.", washes: ["Preto estonado"], price: "R$ 140,00" },
   { name: "Calça Jogador Ice Destroyed", category: "Calças Jeans", image: iceDestroyedJeansAsset.url, description: "Jeans cinza claro de shape afunilado, lavagem acid wash e detalhes destroyed.", washes: ["Cinza ice"], price: "R$ 140,00" },
   { name: "Bermuda Jogador Black White", category: "Bermudas Jeans", image: blackWhiteShortsAsset.url, description: "Jeans preto destroyed com respingos claros, barra desfiada e cordão branco.", washes: ["Preto estonado"], price: "R$ 135,00" },
